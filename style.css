@@ -1,0 +1,151 @@
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    min-height: 100vh;
+    background: #f0f0f0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #444;
+    position: relative;
+  }
+
+  /* ===== การ์ดหลัก: เป็นจุดอ้างอิงของลูกทั้งหมด ===== */
+  .rental-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 360px;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+  }
+
+  /* ===== รูปภาพด้านบน ===== */
+  .card-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 172px;
+    background: linear-gradient(135deg, #6b86a8, #e9b78a 60%, #3b3b4a);
+    /* เปลี่ยนเป็นรูปจริง:
+       background: url("room.jpg") center / cover no-repeat; */
+  }
+
+  /* ===== ป้าย For Rental ===== */
+  .badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 110px;
+    padding: 0 10px 0 30px;
+    background: #f48fb1;
+    color: #fff;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+
+  }
+  .badge .badge-icon {
+    position: absolute;
+    top: 4px;
+    left: 8px;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+  }
+
+  /* ===== ราคา + ประเภท ===== */
+  .price {
+    position: absolute;
+    top: 184px;
+    left: 10px;
+    height: 30px;
+    padding-left: 38px;
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .price .coin {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 28px;
+    height: 28px;
+    border: 2px solid #555;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 24px;
+  }
+
+  .type {
+    position: absolute;
+    top: 189px;
+    right: 10px;
+    font-size: 15px;
+    line-height: 20px;
+    color: #666;
+  }
+
+  /* ===== ที่อยู่ ===== */
+  .address {
+    position: absolute;
+    top: 226px;
+    left: 10px;
+    width: 280px;
+    font-size: 15px;
+    line-height: 23px;
+    color: #333;
+  }
+
+  /* ===== รายละเอียดห้อง ===== */
+  .features {
+    position: absolute;
+    left: 10px;
+    bottom: 22px;
+    width: 280px;
+    height: 24px;
+  }
+  .features .item {
+    position: absolute;
+    top: 0;
+    height: 24px;
+    font-size: 14px;
+    line-height: 24px;
+    color: #555;
+  }
+  .features .item::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #555;
+    border-radius: 3px;
+  }
+  .item.bed   { left: 0;     padding-left: 22px; }
+  .item.bath  { left: 56px;  padding-left: 22px; }
+  .item.area  { left: 112px; padding-left: 22px; }
+  .item.pet   { left: 195px; padding-left: 22px; }
+  .item.bath::before { border-radius: 3px 3px 10px 10px; }
+  .item.pet::before  { border-radius: 50%; }
+
+  /* ===== แถบสีชมพูด้านล่าง ===== */
+  .card-bar {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    height: 6px;
+    background: #c9677f;
+  }
